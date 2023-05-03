@@ -2,8 +2,14 @@ spring:
   application:
     name: currency-conversion
   config:
-    import: optional:configserver:http://localhost:11000
+    import: optional:configserver:http://${config.server.url}
 
+
+config:
+  server:
+    host: localhost
+    port: 11000
+    url: ${config.server.host}:${config.server.port}
 
 
 
@@ -11,11 +17,15 @@ server:
   port: 10000
 
 eureka:
+  server:
+    host: localhost
+    port: 12000
+    url: ${eureka.server.host}:${eureka.server.port}
   instance:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:12000/eureka
+      defaultZone: http://${eureka.server.url}/eureka
 
 management:
   endpoints:

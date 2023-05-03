@@ -1,4 +1,4 @@
-package com.calculator.currency.conversion.service;
+package com.calculator.currency.conversion.service.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.calculator.currency.conversion.service;
+package com.calculator.currency.conversion.service.client;
 
 import java.math.BigDecimal;
 
